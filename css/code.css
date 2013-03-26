@@ -1,0 +1,76 @@
+@charset "UTF-8";
+code {
+white-space: nowrap;
+display: inline;
+}
+
+code, tt {
+background-color: #F8F8F8;
+border: 1px solid #EAEAEA;
+border-radius: 3px 3px 3px 3px;
+margin: 0 2px;
+padding: 0 5px;
+color: #555555;
+}
+
+pre {
+background-color: #F8F8F8;
+border: 1px solid #CCCCCC;
+border-radius: 3px 3px 3px 3px;
+font-size: 13px;
+line-height: 19px;
+overflow: auto;
+padding: 6px 10px;
+margin: 15px 0;
+display: block;
+}
+
+pre code {
+border: none;
+white-space: pre;
+padding: 0;
+}
+
+.str {
+color: #800;
+}
+
+.kwd {
+color: #008;
+}
+
+.com {
+color: #080;
+}
+
+.typ {
+color: #2b91af;
+}
+
+.lit {
+color: #066;
+}
+
+.pun, .opn, .clo {
+color: #660;
+}
+
+.tag {
+color: #008;
+}
+
+.atn {
+color: #606;
+}
+
+.atv {
+color: #080;
+}
+
+.dec, .var {
+color: #606;
+}
+
+.fun {
+color: #2b91af;
+}
