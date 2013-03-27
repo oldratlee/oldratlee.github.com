@@ -2,21 +2,21 @@
 ---
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-    <title type="text" xml:lang="en">adamralph.com</title>
-    <link type="application/atom+xml" href="http://www.adamralph.com/feed/" rel="self"/>
-    <link type="text/html" href="http://www.adamralph.com" rel="alternate"/>
+    <title type="text" xml:lang="en">oldratlee.com</title>
+    <link type="application/atom+xml" href="http://blog.oldratlee.com/feed/" rel="self"/>
+    <link type="text/html" href="http://blog.oldratlee.com/" rel="alternate"/>
     <updated>{{ site.time | date_to_xmlschema }}</updated>
-    <id>http://www.adamralph.com/</id>
+    <id>http://blog.oldratlee.com/</id>
     <author>
-        <name>Adam Ralph</name>
+        <name>Jerry Lee</name>
     </author>
-    <rights>Copyright (c) Adam Ralph</rights>
+    <rights>Copyright (c) Jerry Lee</rights>
     {% for post in site.posts limit:20 %}
     <entry>
         <title>{{ post.title }}</title>
-        <link href="http://www.adamralph.com{{ post.url }}/"/>
+        <link href="http://blog.oldratlee.com/{{ post.url }}/"/>
         <updated>{{ post.date | date_to_xmlschema }}</updated>
-        <id>http://blog.adamralph.com{{ post.url }}/</id>
+        <id>http://blog.oldratlee.com/{{ post.url }}/</id>
         <summary type="html">{{ post.content | xml_escape }}</summary>
     </entry>
     {% endfor %}
