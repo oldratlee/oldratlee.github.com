@@ -44,6 +44,6 @@ Thanks to eddie_butt @ codeplex and Amy Dullard @ Microsoft for suggesting the a
 
 ##Source
 
-The source code for this package is currently hosted at [https://bitbucket.org/adamralph/stylecop-msbuild](https://bitbucket.org/adamralph/stylecop-msbuild). Pull requests are gladly accepted.
+The source code for this package is currently hosted at...
 
 It is planned that this will be merged into [the main StyleCop project at CodePlex](https://stylecop.codeplex.com/) at some point in the future.
