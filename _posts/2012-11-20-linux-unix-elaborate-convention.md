@@ -15,7 +15,7 @@ tags:
 - Linux
 - Unix
 - Convention
-- *uni
+- \*uni
 - 文件权限
 - 行数统计
 ---

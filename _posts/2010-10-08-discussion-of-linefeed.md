@@ -20,7 +20,7 @@ tags:
 
 代码一：
 
-{% highlight C %}
+{% highlight c %}
 int len = 10;
 int result[] = XXX;
 for(int i = 0; i < len; ++i) {
@@ -33,7 +33,7 @@ for(int i = 0; i < len; ++i) {
 
 代码二：
 
-{% highlight C %}
+{% highlight c %}
 int len = 10;
 int result[] = XXX;
 for(int i = 0; i < len; ++i) {
@@ -50,7 +50,7 @@ for(int i = 0; i < len; ++i) {
 
 代码三：
 
-{% highlight C %}
+{% highlight c %}
 int len = 10;
 int result[] = XXX;
 for(int i = 0; i < len; ++i) {
@@ -68,7 +68,6 @@ for(int i = 0; i < len; ++i) {
 
 引子2
 ======================
-
 
 在Linux下，下面命令
 
