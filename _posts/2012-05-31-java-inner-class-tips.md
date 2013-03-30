@@ -5,8 +5,10 @@ location: Hangzhou
 permalink: /516/tech/java/java-inner-class-tips.html
 write-time: 2012-05-31 21:00
 tags:
-- XX
-- YY
+- tips
+- inner class
+- 内部类
+- Java
 ---
 
 一、引子
@@ -18,7 +20,8 @@ tags:
 
 方便演示先准备一个工具方法：
 
-```java
+{% highlight java %}
+
 package com.oldratlee.io.s;
 import java.io.ByteArrayOutputStream;
 import java.io.IOException;
@@ -39,11 +42,12 @@ public class Util {
         }
     }
 }
-```
+{% endhighlight %}
 
 下面的测试运行失败： 
 
-```java
+{% highlight java %}
+
 package com.oldratlee.io.s;
 import java.io.Serializable;
 import org.junit.Test;
@@ -83,13 +87,14 @@ public class InnnerClassSerialization_FailTest {
         Util.writeObject(data);
     }
 }
-```
+{% endhighlight %}
 
 上面的3个测试用例全部运行失败。
 
 出错异常相同:
 
-```java
+{% highlight java %}
+
 java.io.NotSerializableException: com.oldratlee.io.s.InnnerClassSerialization_FailTest
     at java.io.ObjectOutputStream.writeObject0(ObjectOutputStream.java:1164)
     at java.io.ObjectOutputStream.defaultWriteFields(ObjectOutputStream.java:1518)
@@ -100,7 +105,7 @@ java.io.NotSerializableException: com.oldratlee.io.s.InnnerClassSerialization_Fa
     at com.oldratlee.io.s.Util.writeObject(Util.java:12)
     at com.oldratlee.io.s.InnnerClassSerialization_FailTest.testSerializable_Attribute_AnonymousClass(InnnerClassSerialization_FailTest.java:26)
         ......
-```
+{% endhighlight %}
 
 异常信息里，可以看到报的类com.oldratlee.io.s.InnnerClassSerialization_FailTest类不可序列化。
 
@@ -112,7 +117,8 @@ java.io.NotSerializableException: com.oldratlee.io.s.InnnerClassSerialization_Fa
 
 示例如下，只演示了可以互相访问Private属性。
 
-```java
+{% highlight java %}
+
 package com.oldratlee.io.s;
 public class A {
     private int attrib;
@@ -135,7 +141,7 @@ public class A {
         return a;
     }
 }
-```
+{% endhighlight %}
 
 2) 非静态内部类隐含了一个指向外部类引用
 
@@ -145,7 +151,8 @@ public class A {
 
 代码示例：
 
-```java
+{% highlight java %}
+
 package com.oldratlee.io.s;
 public class B {
     private int foo;
@@ -159,7 +166,7 @@ public class B {
         }
     }
 }
-```
+{% endhighlight %}
 
 这一点就是引子里，UT运行失败的原因。
 
@@ -193,7 +200,8 @@ public class B {
 
 外部类（UT类）实现了Serializable接口，这样外部类可以序列化，下面UT通过。
 
-```java
+{% highlight java %}
+
 package com.oldratlee.io.s;
 import java.io.Serializable;
 import org.junit.Test;
@@ -234,7 +242,7 @@ public class InnnerClassSerializationTest implements Serializable {
         Util.writeObject(data);
     }
 }
-```
+{% endhighlight %}
 
 2) 修改内部类成为静态
 
@@ -244,9 +252,10 @@ public class InnnerClassSerializationTest implements Serializable {
 
 非匿名内部类，在类声明上加上static关键字即可
 匿名内部类，a) 类属性用到匿名内部类时，把类属性声明成静态 b) 方法里用到匿名内部类时，把方法声明成静态  
-# 如果类属性、方法不是静态的，生成匿名内部类则不是静态类。
+\# 如果类属性、方法不是静态的，生成匿名内部类则不是静态类。
 
-```java
+{% highlight java %}
+
 package com.oldratlee.io.s;
 import java.io.Serializable;
 import junit.framework.TestCase;
@@ -285,7 +294,7 @@ public class StaticClassSerialization_JUnit3_Test extends TestCase {
         Util.writeObject(data);
     }
 }
-```
+{% endhighlight %}
 
 【注】这里使用了JUnit 3，因为JUnit 3允许UT方法为静态；JUnit 4的UT方法，不能为静态，运行时会抛Exception中止。
 

@@ -5,8 +5,20 @@ location: Hangzhou
 permalink: /post/2012-12-22/stunning-cygwin
 write-time: 2012-12-22 13:46
 tags:
-- XX
-- YY
+- shell
+- Unix/Linux
+- cmd
+- Windows
+- 命令行
+- cygwin
+- 163
+- git
+- 自动补全
+- Command Line
+- 丑小鸭
+- 天鹅
+- 权限
+- 配置
 ---
 
 5年前倒腾过一次cygwin，当时体验感觉不好。到现在一直用的是[GNU utilities for Win32](http://unxutils.sourceforge.net/ "GNU utilities for Win32")，在Windows的CMD中使用*nix的命令工具包。
@@ -46,7 +58,7 @@ bash_completion包（命令补全的增强包）让cygwin补全更强劲，但�
 
 调整${HOME}/.bashrc文件，把注释掉别名打开：
 
-```bash
+{% highlight bash %}
 alias df='df -h'
 alias du='du -h'
 
@@ -62,7 +74,7 @@ alias ll='ls -l'                              # long list
 alias la='ls -A'                              # all but . and ..
 alias l='ls -CF'                              #
 alias wch='which -a'
-```
+{% endhighlight %}
 
 这样调整后，可以ls、grep、dir输出彩色显示。
 
@@ -70,9 +82,9 @@ alias wch='which -a'
 
 git输出（比如log、status）彩色显示，使用下面的命令配置：
 
-```bash
+{% highlight bash %}
 git config --global color.ui auto
-```
+{% endhighlight %}
 
 vi配置
 ======================
@@ -80,7 +92,7 @@ vi配置
 在`${HOME}/.vimrc`文件中加上：
 \# 没有`.vimrc`文件就新建。
 
-```bash
+{% highlight bash %}
 set number
 set hlsearch
 set fileencoding=utf-8
@@ -90,7 +102,7 @@ set nocompatible
 set backspace=indent,eol,start
 
 syntax enable
-```
+{% endhighlight %}
 
 说明：
 
@@ -110,26 +122,26 @@ syntax enable
 
 到D盘，要`/cygdrive/d`，可以新建符号链接`/d`，这样可以减少录入（[MSYS](http://www.mingw.org/wiki/MSYS "MSYS")的做法）
 
-```bash
+{% highlight bash %}
 ln -s /cygdrive/c /c
 ln -s /cygdrive/d /d
 ln -s /cygdrive/e /e
-```
+{% endhighlight %}
 
 自动补全不区分大小写
 ===========================
 
 `~/.bashrc`文件中添加：
 
-```bash
+{% highlight bash %}
 shopt -s nocaseglob
-```
+{% endhighlight %}
 
 `~/.inputrc`文件中添加：
 
-```bash
+{% highlight bash %}
 set completion-ignore-case on
-```
+{% endhighlight %}
 
 cygwin的官方文档：[How can I get bash filename completion to be case insensitive?](http://cygwin.com/faq/faq-nochunks.html#faq.using.bash-insensitive)
 
@@ -138,7 +150,7 @@ cygwin的官方文档：[How can I get bash filename completion to be case insen
 
 `.inputrc`文件中添加：
 
-```bash
+{% highlight bash %}
 # Ctrl+Left/Right to move by whole words
 "\e[1;5C": forward-word
 "\e[1;5D": backward-word
@@ -146,7 +158,7 @@ cygwin的官方文档：[How can I get bash filename completion to be case insen
 # Ctrl+Backspace/Delete to delete whole words
 "\e[3;5~": kill-word
 "\C-_": backward-kill-word
-```
+{% endhighlight %}
 
 参考资料：[Ctrl-Arrow Keys, Ctrl-Backspace, Ctrl-Delete](http://www.samhartsfield.com/dokuwiki/info/cygwin)
 
@@ -157,29 +169,29 @@ cygwin的路径和Windows的路径表示不一样。
 
 要注意的是，cygwin下的`cd`命令可以**直接使用**Windows的路径表示。
 
-```bash
+{% highlight bash %}
 $ cd 'C:\Windows\System32\drivers\etc'
-```
+{% endhighlight %}
 注：不要忘了加上**单引号**，因为`\`是bash元字符，用于转义。不用上单引号`cd`命令收到的参数值就不是`C:\Windows\System32\drivers\etc`，运行报错。
 
 路径转换的需求减了大半。
 
 有`cygpath`命令来完成转换，相关的选项是：
 
-```bash
+{% highlight bash %}
   -a, --absolute        output absolute path
   -w, --windows         print Windows form of NAMEs (C:\WINNT)
   -u, --unix            (default) print Unix form of NAMEs (/cygdrive/c/winnt)
-```
+{% endhighlight %}
 
 执行的例子：
 
-```bash
+{% highlight bash %}
 $ cygpath -au 'C:\Windows\System32\drivers\etc'
 /cygdrive/c/Windows/System32/drivers/etc
 $ cygpath -aw '/cygdrive/c/Windows/System32/drivers/etc'
 C:\Windows\System32\drivers\etc
-```
+{% endhighlight %}
 
 cygwin的官方文档：[How do I convert between Windows and UNIX paths?](http://cygwin.com/faq-nochunks.html#faq.using.converting-paths "How do I convert between Windows and UNIX paths?")
 
@@ -193,7 +205,7 @@ cygwin的官方文档：[How do I convert between Windows and UNIX paths?](http:
 打开文件或文件夹脚本，可以这个脚本命名成`xpl`，放到PATH上。  
 \# `xpl`是`explorer`的缩写
 
-```bash
+{% highlight bash %}
 #!/bin/bash
 
 cygwin=false;
@@ -211,12 +223,12 @@ else
 fi
 
 explorer $XPATH
-```
+{% endhighlight %}
 
 打开文件或文件夹，并选中的脚本，可以这个脚本命名成`xpf`，放到PATH上。  
 \# `xpf`是`explorer and select file`的缩写
 
-```bash
+{% highlight bash %}
 #!/bin/bash
 
 cygwin=false;
@@ -234,7 +246,7 @@ else
 fi
 
 explorer '/select,' $XPATH
-```
+{% endhighlight %}
 
 文件权限问题
 ======================
@@ -244,13 +256,13 @@ explorer '/select,' $XPATH
 
 Windows的文件的cygwin下没有权限：
 
-```bash
+{% highlight bash %}
 $ rm foo.txt
 error: open("foo.txt"): Permission denied
 error: unable to index file foo.txt
 $ ll foo.txt
 ----------+ 1 Jerry None 486 Dec 24 14:16 foo.txt
-```
+{% endhighlight %}
 
 文件的权限显示的是`----------+`，没有读写的权限。
 
@@ -259,18 +271,18 @@ $ ll foo.txt
 
 编辑`/etc/fstab`，在末尾加上下面的一行：   
 
-```bash
+{% highlight bash %}
 none /cygdrive cygdrive binary,noacl,posix=0,user 0 0
-```
+{% endhighlight %}
 
 关闭所有cygwin进程，再重启cygwin命令行。
 
 显示文件权限已经正常`-rw-r--r--`：
 
-```bash
+{% highlight bash %}
 $ ll foo.txt
 -rw-r--r-- 1 Jerry None 486 Dec 24 14:16 foo.txt
-```
+{% endhighlight %}
 
 *注意！* 如果改了`/etc/fstab`但是没有生效，可以重启一下机器！
 

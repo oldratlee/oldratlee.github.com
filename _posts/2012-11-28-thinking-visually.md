@@ -5,8 +5,16 @@ location: Hangzhou
 permalink: /post/2012-11-28/thinking-visually
 write-time: 2012-11-28 21:33
 tags:
-- XX
-- YY
+- 看清你的思维图谱
+- UML
+- 绘图
+- MindMap
+- 绘图约定
+- 约定
+- 设计
+- 交流
+- 表达
+- 一图胜千言
 ---
 
 这段时间看了一些图相关的内容，[MindMap](http://baike.baidu.com/view/30054.htm "MindMap")、[《看清你的思维图谱》](http://book.douban.com/subject/1061710/ "《看清你的思维图谱》")。以前看过一些[UML（统一建模语言）](http://baike.baidu.com/view/23396.htm "UML（统一建模语言）")的书。

@@ -5,8 +5,17 @@ location: Hangzhou
 permalink: /post/2012-11-04/gui-cli-principles
 write-time: 2012-11-04 17:03
 tags:
-- XX
-- YY
+- Principle
+- GUI
+- Principles
+- 图形化
+- 图形化工具
+- 命令行
+- 命令行工具
+- 原则
+- 优势
+- 优劣
+- 比较
 ---
 
 文章[Subversion UI Shootout](http://onlamp.com/pub/a/onlamp/2005/03/10/svn_uis.html "Subversion UI Shootout")比较了多个GUI SVN工具以及命令行的优劣。

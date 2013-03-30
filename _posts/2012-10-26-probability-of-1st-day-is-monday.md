@@ -5,8 +5,13 @@ location: Hangzhou
 permalink: /post/2012-10-26/probability-of-1st-day-is-monday
 write-time: 2012-10-26 1:54
 tags:
-- XX
-- YY
+- date
+- week
+- 日期
+- 星期
+- 计算
+- 概率
+- 月份
 ---
 
 # 引子 
@@ -35,7 +40,7 @@ tags:
 
 [蔡勒公式](http://zh.wikipedia.org/zh-cn/%E6%98%9F%E6%9C%9F%E7%9A%84%E8%A8%88%E7%AE%97#.E8.94.A1.E5.8B.92.E5.85.AC.E5.BC.8F "蔡勒公式")很适合用于程序计算，下面是公式对应的Python代码：
 
-```python
+{% highlight python %}
 def getWeek(y, m, d) :
     if m < 3 :
         --y
@@ -47,7 +52,7 @@ def getWeek(y, m, d) :
 getWeek(2012, 10, 26) # Output is 5, Friday
 getWeek(2012, 10, 28) # Output is 0, Sunday
 getWeek(2013, 1, 1) # Output is 3, Wednesday
-```
+{% endhighlight %}
 
 上面代码里，挑了3个日子，验证了一下，正确的。
 

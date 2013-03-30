@@ -5,10 +5,16 @@ location: Hangzhou
 permalink: /post/2012-11-13/1-st-day-is-monday-month-count
 write-time: 2012-11-13 22:30
 tags:
-- XX
-- YY
+- date
+- week
+- 日期
+- 星期
+- 计算
+- 月份
+- 润年
+- 日历
+- 个数
 ---
-
 
 前面的博文“[任意挑一个月，一号是星期一的概率](http://oldratlee.com/post/2012-10-26/probability-of-1st-day-is-monday "任意挑一个月，一号是星期一的概率")”末尾留下了本文问题。
 

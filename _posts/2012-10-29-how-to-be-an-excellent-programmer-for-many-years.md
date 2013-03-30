@@ -5,8 +5,11 @@ location: Hangzhou
 permalink: /post/2012-10-29/how-to-be-an-excellent-programmer-for-many-years
 write-time: 2012-10-28 22:09
 tags:
-- XX
-- YY
+- 程序员
+- 优秀
+- excellent
+- programmer
+- 保持
 ---
 
 好几条都颇有共鸣~

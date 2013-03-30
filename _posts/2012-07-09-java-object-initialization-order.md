@@ -5,8 +5,13 @@ location: Hangzhou
 permalink: /576/tech/java/java-object-initialization-order.html
 write-time: 2012-07-09 23:22
 tags:
-- XX
-- YY
+- 顺序
+- object
+- initialization order
+- Java
+- 初始化
+- 对象
+- 对象初始化
 ---
 
 今天我在淘宝Blog阅读了一篇关于java对象实例初始化顺序的文章，讲得挺好的，还严谨地找出了JLS。
@@ -15,7 +20,7 @@ tags:
 
 示例代码
 
-```java
+{% highlight java %}
 package com.oldratlee.initorder;
 class Father {
     Object obj1 = new Object() {
@@ -41,16 +46,17 @@ public class Son extends Father {
         new Son();
     }
 }
-```
+{% endhighlight %}
 
 输出的结果是：
 
-```java
+{% highlight java %}
+
 Init Father Attribute!
 Run Father Constructor!
 Init Son Attribute!
 Run Son Constructor!
-```
+{% endhighlight %}
 
 总结说明
 
@@ -60,11 +66,11 @@ Run Son Constructor!
 
 然后，
 
-父类初始化
-类成员初始化（实际上也含了初始化代码块）
-执行构造函数代码
+1. 父类初始化
+1. 类成员初始化（实际上也含了初始化代码块）
+1. 执行构造函数代码
+
 【注】第一点『父类初始化』执行得也是上面的三点（递归）。展开递归过程就是按继承层次，先执行上层基类 “类成员初始化”“构造函数代码”，再执行子类的。最高的基类是Object类（没有类成员，构造函数空）。
 
-PS:
-
+PS:  
 示例代码在 https://bitbucket.org/oldrat/java-tips/overview 可以下载查看。

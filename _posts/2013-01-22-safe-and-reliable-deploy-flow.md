@@ -5,8 +5,14 @@ location: Hangzhou
 permalink: /post/2013-01-22/safe-and-reliable-deploy-flow
 write-time: 2013-01-22 15:30
 tags:
-- XX
-- YY
+- 发布
+- 流程
+- 安全
+- 可靠
+- Dubbo
+- 最佳实践
+- 角色
+- 回滚
 ---
 
 转自发在公司博文：[准备一个安全可靠的发布流程](http://rdc.taobao.com/team/jm/archives/2755 "准备一个安全可靠的发布流程")

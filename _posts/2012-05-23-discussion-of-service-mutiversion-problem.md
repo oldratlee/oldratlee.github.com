@@ -5,11 +5,20 @@ location: Hangzhou
 permalink: /500/tech/design/discussion-of-service-mutiversion-problem.html
 write-time: 2012-05-23 13:40
 tags:
-- XX
-- YY
+- dubbo
+- 多版本
+- Service
+- 设计
+- discussion
+- service governance
+- mutiversion
+- 服务
+- soa
+- solution
+- 服务治理
 ---
 
-转于自己在公司的Blog：http://code.alibabatech.com/blog/architecture_1434/discussion-and-solution-of-service-mutiversion-problem.html
+转于自己在公司的Blog：<http://code.alibabatech.com/blog/architecture_1434/discussion-and-solution-of-service-mutiversion-problem.html>
 
 在支持Dubbo的过程中，常常会被问到：如何下线服务的一个废弃（Deprecated）的方法。
 

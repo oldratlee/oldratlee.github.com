@@ -3,10 +3,17 @@ layout: post
 title: 发布及其检查的自动化实践
 location: Hangzhou
 permalink: /post/2013-01-22/deploy-check-automation
-write-time: 2013-01-11 18:00
+write-time: 2013-01-22 10:38
 tags:
-- XX
-- YY
+- 发布
+- 检查
+- 验证
+- 自动化
+- 实践
+- Dubbbo
+- 注册中心
+- 服务
+- 监控
 ---
 
 转自发在公司的博文： [发布及其检查的自动化实践](http://rdc.taobao.com/team/jm/archives/2753 "发布及其检查的自动化实践")

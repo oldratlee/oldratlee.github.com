@@ -3,10 +3,17 @@ layout: post
 title: Dubbo的2个版本并行的开发模式
 location: Hangzhou
 permalink: /post/2012-11-08/2-parallel-version-dev
-write-time: 2013-01-11 18:00
+write-time: 2012-11-08 17:25
 tags:
-- XX
-- YY
+- 开发模式
+- 版本
+- 并行版本
+- Dubbo
+- Bug Fix
+- 新功能
+- 稳定性
+- 工程实践
+- 开发
 ---
 
 **新功能的开发** 和 **稳定性的保持** 对产品都很重要。

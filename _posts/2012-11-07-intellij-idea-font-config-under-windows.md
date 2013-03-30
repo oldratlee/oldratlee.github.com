@@ -3,10 +3,19 @@ layout: post
 title: Windows下IntelliJ IDEA代码显示的中文字符字体配置
 location: Hangzhou
 permalink: /post/2012-11-07/intellij-idea-font-config-under-windows
-write-time: 2013-01-11 18:00
+write-time: 2012-11-07 22:52
 tags:
-- XX
-- YY
+- IntelliJ IDEA
+- IntelliJ
+- IDEA
+- 字体
+- Font
+- 中文字符
+- 中文
+- 配置
+- Java
+- Windows
+- netbeans
 ---
 
 Windows下IntelliJ IDEA代码里的中文字符显示效果不好，大小不一、歪歪扭扭的，斜体时用字体也不一样。

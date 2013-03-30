@@ -5,8 +5,19 @@ location: Hangzhou
 permalink: /post/2012-11-20/linux-unix-elaborate-convention
 write-time: 2012-11-19 23:32
 tags:
-- XX
-- YY
+- Unix/Linux
+- 约定
+- 设计
+- 文件
+- 执行
+- 权限
+- 行数
+- Linux
+- Unix
+- Convention
+- *uni
+- 文件权限
+- 行数统计
 ---
 
 学玩*nux时候，碰到的一些问题，弄明白了后也就过去了。今天看到旁边的同学对目录权限有些模糊，给解释了一下。想想不如把这些问题都记下来。

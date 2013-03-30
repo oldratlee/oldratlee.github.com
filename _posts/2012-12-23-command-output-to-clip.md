@@ -5,8 +5,24 @@ location: Hangzhou
 permalink: /post/2012-12-23/command-output-to-clip
 write-time: 2012-12-23 14:28
 tags:
-- XX
-- YY
+- 剪贴板
+- 命令
+- Windows
+- Mac
+- Linux
+- Clip
+- Command Line
+- shell
+- Unix/Linux
+- xsel
+- pbcopy
+- copy
+- paste
+- 复制
+- 粘贴
+- 拷贝
+- CTRL + C
+- CTRL + V
 ---
 
 为什么要这么做？

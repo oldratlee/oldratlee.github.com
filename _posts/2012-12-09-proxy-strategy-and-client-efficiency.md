@@ -3,10 +3,15 @@ layout: post
 title: 代理重定向策略及其用户感受的分析
 location: Hangzhou
 permalink: /post/2012-12-09/proxy-strategy-and-client-efficiency
-write-time: 2013-01-11 18:00
+write-time: 2012-12-09 11:58
 tags:
-- XX
-- YY
+- 代理
+- 契约
+- 契约精神
+- 用户
+- 踢皮球
+- 重定向
+- 设计
 ---
 
 原本是写一篇生活的博文，现在看来，只要把标题“代理重定向策略及其用户感受的分析”，就是一篇技术博文了。

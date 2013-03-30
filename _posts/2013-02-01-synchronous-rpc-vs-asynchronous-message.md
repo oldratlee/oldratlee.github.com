@@ -5,8 +5,18 @@ location: Hangzhou
 permalink: /post/2013-02-01/synchronous-rpc-vs-asynchronous-message
 write-time: 2013-01-31 18:54
 tags:
-- XX
-- YY
+- RPC
+- JMS
+- Queue
+- message
+- 远程调用
+- 消息
+- 同步
+- 异步
+- Dubbo
+- MetaQ
+- napoli
+- HSF
 ---
 
 在阿里的平台技术部参与开发了Dubbo（远程调用服务）和Napoli（消息解决方案），又给网站应用支持这2个产品很长一段时间，了解了这2个产品的实现及应用对这两个产品的用法。

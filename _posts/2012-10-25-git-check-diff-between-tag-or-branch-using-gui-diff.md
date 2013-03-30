@@ -3,10 +3,20 @@ layout: post
 title: Git如何使用GUI（图形化）Diff工具查看两个分支或是标签的Diff
 location: Hangzhou
 permalink: /post/2012-10-25/git-check-diff-between-tag-or-branch-using-gui-diff
-write-time: 2013-01-11 18:00
+write-time: 2012-10-25 0:31
 tags:
 - XX
-- YY
+- git
+- diff
+- Beyond Compare
+- tag
+- branch
+- 分支
+- 标签
+- svn
+- gui
+- 差异
+- GUI Diff
 ---
 
 使用TortoiseGit可以解决这个问题。
