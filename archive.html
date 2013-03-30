@@ -17,6 +17,6 @@ title: Archive
 <h2>{{ month }} {{ year }}</h2>
 <ul>
     {% endif %}
-  <li><a href="{{ post.url | remove:'.html' }}">{{ post.title }}</a> ({{ post.date | date_to_string }})</li>
+  <li><a href="{{ post.url }}">{{ post.title }}</a> ({{ post.date | date_to_string }})</li>
 {% endfor %}
 </ul>
