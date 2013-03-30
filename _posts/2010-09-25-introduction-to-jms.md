@@ -1,14 +1,14 @@
 ---
 layout: post
-title: [译]An Introduction to the JMS
+title: 【译】An Introduction to the JMS
 location: Hangzhou
 permalink: /115/tech/java/introduction-to-jms.html
 write-time: 2010-09-25 21:39
 tags:
-- JLS
-- 生活
-- blog
-- Java,
+- Java
+- jms
+- mom
+- middleware
 ---
 
 翻译至《Practical JMS 第一版》一书的 第一章An Introduction to the JMS 的 第一节Setting the Stage。
@@ -28,7 +28,7 @@ tags:
 
 > The wide range of software layered between applications and an operating system that provide specialized services and interoperability between distributed applications.
 
-或者，一个简单的说法：中间件是把从一个软件应用连接到另一个软件应用的软件。（middleware is the software used to connect software applications to one another.）
+或者，一个简单的说法：中间件是把从一个软件应用连接到另一个软件应用的软件。（***middleware is the software used to connect software applications to one another.***）
 
 2. 中间件的分类
 ===============================

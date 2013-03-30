@@ -5,10 +5,10 @@ location: Hangzhou
 permalink: /218/tech/unix/discussion-of-linefeed.html
 write-time: 2010-10-08 11:47
 tags:
-- JLS
-- 生活
-- blog
-- Java,
+- Unix/Linux
+- unix
+- linefeed
+- philosophy
 ---
 
 引子1
@@ -20,7 +20,7 @@ tags:
 
 代码一：
 
-```C
+{% highlight C %}
 int len = 10;
 int result[] = XXX;
 for(int i = 0; i < len; ++i) {
@@ -29,11 +29,11 @@ for(int i = 0; i < len; ++i) {
         printf(“\n”);
     }
 }
-```
+{% endhighlight %}
 
 代码二：
 
-```C
+{% highlight C %}
 int len = 10;
 int result[] = XXX;
 for(int i = 0; i < len; ++i) {
@@ -42,7 +42,7 @@ for(int i = 0; i < len; ++i) {
     }
     printf(“%d”, i);
 }
-```
+{% endhighlight %}
 
 这两种写法，倾向于第二种，看起来更整齐些。
 
@@ -50,14 +50,14 @@ for(int i = 0; i < len; ++i) {
 
 代码三：
 
-```C
+{% highlight C %}
 int len = 10;
 int result[] = XXX;
 for(int i = 0; i < len; ++i) {
     printf(“%d”, i);
     printf(“\n”);
 } 
-```
+{% endhighlight %}
 
 但是这个代码不符合题目的要求，因为最后一个结果也输出了换行。
 
@@ -72,9 +72,9 @@ for(int i = 0; i < len; ++i) {
 
 在Linux下，下面命令
 
-```bash
+{% highlight bash %}
 $ echo -n hello | wc -l
-```
+{% endhighlight %}
 
 的输出是什么？
 
@@ -87,9 +87,9 @@ $ echo -n hello | wc -l
 
 假设文件名是text.txt，下面的命令
 
-```bash
+{% highlight bash %}
 $ wc -c text.txt
-```
+{% endhighlight %}
 
 的输出是什么？
 
@@ -100,6 +100,6 @@ $ wc -c text.txt
 
 在引子1中看到，关于换行的问题，如果约定成：
 
-每个结果输出都换行。
+> 每个结果输出都换行。
 
 那么可以得到最规整的代码实现。在Unix系统中，关于换行使用的就是这个约定。在引子2，引子3中可以得到验证。

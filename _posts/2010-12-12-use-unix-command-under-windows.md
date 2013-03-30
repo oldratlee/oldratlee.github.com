@@ -5,10 +5,12 @@ location: Hangzhou
 permalink: /297/tech/unix/use-unix-command-under-windows.html
 write-time: 2010-12-12 18:10
 tags:
-- JLS
-- 生活
-- blog
-- Java,
+- gnu
+- command
+- Shell
+- windows
+- Unix/Linux
+- uinx
 ---
 
 Unix/Linux系统下命令比起Windows要系统完整的多。
@@ -40,18 +42,15 @@ Unix/Linux系统下命令比起Windows要系统完整的多。
 1. 下载和配置
 -------------------
 
-Native命令下载地址在：
+Native命令下载地址在：  
+<http://unxutils.sourceforge.net>
 
-http://unxutils.sourceforge.net/
+上面列出有两个下载：  
+<http://unxutils.sourceforge.net/UnxUtils.zip>  
+<http://unxutils.sourceforge.net/UnxUpdates.zip> 一些更新的命令    
+\# 原始地址可能已经不能下载，但是使用迅雷是可以下载的（会从镜像站下载）
 
-上面列出有两个下载：
-
-http://unxutils.sourceforge.net/UnxUtils.zip
-
-http://unxutils.sourceforge.net/UnxUpdates.zip 一些更新的命令  
-# 原始地址可能已经不能下载，但是使用迅雷是可以下载的（会从镜像站下载）
-
-把UnxUtils.zip解压到一个目录下，比如D:\bin\UnxUtils。
+把UnxUtils.zip解压到一个目录下，比如`D:\bin\UnxUtils`。
 
 Native命令位于D:\bin\UnxUtils\usr\local\wbin 目录下，把这目录加到PATH环境变量中，这们大功告成，重启Cmd可以用了。
 
@@ -84,9 +83,9 @@ PS:
 
 删除一个目录下所有的Eclipse工程文件
 
-```bash
+{% highlight bash linenos %}
 ufind -iname .project -or -iname .settings | xargs rm -rf
-```
+{% endhighlight %}
 
 3. 你可能不知道的Windows自带命令的用法
 ---------------------------------------
@@ -101,23 +100,23 @@ Windows下已有的命令也可以。
 
 加上下面的选项(/select,)，会打开文件文件浏览器，并选中文件夹c:/windows。
 
-```bash
+{% highlight bash linenos %}
 explorer /select, c:/windows
-```
+{% endhighlight %}
 
 可以作两个批处理文件，减少键入：
 
 xpl.bat （打开指定的文件）
 
-```
+{% highlight bash linenos %}
 @ start "Title Placeholder" explorer %*
-```
+{% endhighlight %}
 
 xpf.bat （打开文件或是文件夹并选中）
 
-```bash
+{% highlight bash linenos %}
 @ start "Title Placeholder" explorer /select, %*
-```
+{% endhighlight %}
 
 ### dir
 
@@ -129,8 +128,9 @@ xpf.bat （打开文件或是文件夹并选中）
 
 dsb.bat
 
-```bash
+{% highlight bash linenos %}
 @ dir /s /b %*
+{% endhighlight %}
 
 PS:   
 有关CMD的小技巧参见我的文章《Windows的CMD使用小技巧》。
@@ -154,6 +154,6 @@ Port的命令比较全。连gcc都有。
 ====================
 
 - UNIX Command Line Tools For MS-Windows XP / Vista / 7 Operating Systems   
-http://www.cyberciti.biz/faq/unix-command-line-utilities-for-windows/
-- Cygwin is a Linux-like environment for Windows http://www.cygwin.com/
-- some ports of common GNU utilities to native Win32 http://unxutils.sourceforge.net/
+<http://www.cyberciti.biz/faq/unix-command-line-utilities-for-windows/>
+- Cygwin is a Linux-like environment for Windows <http://www.cygwin.com/>
+- some ports of common GNU utilities to native Win32 <http://unxutils.sourceforge.net/>

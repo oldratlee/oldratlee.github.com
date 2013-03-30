@@ -5,10 +5,11 @@ location: Hangzhou
 permalink: /103/tech/java/jms-concept-usage.html
 write-time: 2010-09-25 20:41
 tags:
-- JLS
-- 生活
-- blog
-- Java,
+- active mq
+- mom
+- jms
+- Java
+- middleware
 ---
 
 Part 1 概念
@@ -17,7 +18,7 @@ Part 1 概念
 一、中间件 ＆ 消息中间件（Message-Oriented Middleware、MOM）
 -------------------------------------------------------------
 
-参见[An Introduction to the JMS](http://oldratlee.com/115/introduction-to-jms.html)。
+参见[An Introduction to the JMS](http://oldratlee.com/115/tech/java/introduction-to-jms.html)。
  
 
 二、JMS占了MOM分布式系统中哪些部分
@@ -41,9 +42,9 @@ JMS是一个定义了一套接口和相关的语义的规范，以便使用Java�
 
 1. JMS只是规范，并不是一个实际的MOM实现。
 1. 因为是个规范，所以只定义的接口和他们的语义。
-1. 这些接口用于和JMS兼容的MOM产品交互。幸运的是，在市场上有很多JMS兼容的MOM产品，包括IBM的MQSeries、Progress Software的SonicMQ、Fiorano的FioranoMQ等待。JMS兼容的MOM被称为JMS提供者（JMS provider）。
+1. 这些接口用于和JMS兼容的MOM产品交互。幸运的是，在市场上有很多JMS兼容的MOM产品，包括IBM的MQSeries、Progress Software的SonicMQ、Fiorano的FioranoMQ等待。JMS兼容的MOM被称为**JMS提供者（JMS provider）**。
 
-简单地说，JMS是一个从Java应用访问MOM设施的API。（ *JMS is an API used to access the facilities of a MOM from a Java application.*）
+简单地说，JMS是一个从Java应用访问MOM设施的API。（***JMS is an API used to access the facilities of a MOM from a Java application.***）
 
 三、JMS API的设计
 -------------------------------------------------------------
@@ -62,9 +63,9 @@ Part 2 使用
 
 ### 1. 下载ActiveMQ
 
-ActiveMQ主页： http://activemq.apache.org/
+ActiveMQ主页： <http://activemq.apache.org/>
 
-下载地址：http://activemq.apache.org/download.html
+下载地址：<http://activemq.apache.org/download.html>
 
 下载5.2.0的版本，相应的maven库也有了，方便开发。
 
@@ -97,11 +98,12 @@ ActiveMQ主页： http://activemq.apache.org/
 
 程序没有什么注释，代码在做什么，方法名本身说明得很清楚了。
 
-如果对方法名不理解，可以参考JMS的API文档，讲得很好。http://java.sun.com/javaee/5/docs/api/，JMS在包javax.jms下。
+如果对方法名不理解，可以参考JMS的API文档，讲得很好。<http://java.sun.com/javaee/5/docs/api/>，JMS在包javax.jms下。
 
 发送消息的程序：
 
 ```java
+
 public class SimpleSender {
 	private static final Log logger = LogFactory.getLog(SimpleSender.class);
 	public static void main(String[] args) throws Exception {
@@ -149,17 +151,16 @@ public class SimpleReceiver {
 }
 ```
 
-附录：JMS可以参考的资料
+JMS可以参考的资料
 ===================================
 
-- sun的JMS主页：http://java.sun.com/products/jms/。 
-- JMS的规范：http://java.sun.com/products/jms/docs.html。
-- Java Message Service Tutorial：http://java.sun.com/products/jms/tutorial/index.html。
-- Java EE API文档：http://java.sun.com/javaee/5/docs/api/，JMS在包javax.jms下。看JMS的API是最高效学习方法。
-- ActiveMQ的网站：http://activemq.apache.org/
+- sun的JMS主页：<http://java.sun.com/products/jms/>。 
+- JMS的规范：<http://java.sun.com/products/jms/docs.html>。
+- Java Message Service Tutorial：<http://java.sun.com/products/jms/tutorial/index.html>。
+- Java EE API文档：<http://java.sun.com/javaee/5/docs/api/>，JMS在包javax.jms下。看JMS的API是最高效学习方法。
+- ActiveMQ的网站：<http://activemq.apache.org/>
 - 《Practical JMS》 ：这本书讲得是JMS 1.0.2，现在JMS版本是1.1。所以这本书讲的JMS使用有些过时，概念上没有问题。
 - 《Java Message Service》第二版：讲的是 JMS 1.1。
-
 
 PS:  
 整理过来的内容，2009年8月30日写的。做Napoli项目要用到JMS。

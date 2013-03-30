@@ -3,20 +3,24 @@ layout: post
 title: 备份你的Wordpress，推荐几个好用的插件
 location: Hangzhou
 permalink: /171/life/wordpress-backup-and-useful-plugins.html
-write-time: 2010-09-18 19:32
+write-time: 2010-09-30 17:27
 tags:
-- JLS
+- shell
 - 生活
-- blog
-- Java,
+- Unix/Linux
+- wordpress
+- windows live writer
+- backup
 ---
+
+![Wordpress](/files/wordpress-backup-and-useful-plugins.jpeg)
 
 WordPress功能确实很强，对于个人Blog或是小型的内容网站非常够用了。WordPress是免费的真是令人感动~~
 
-一、备份你的Wordpress
+一、备份Wordpress
 ===============================
 
-天有不测风云，定期备份是王道，丢了数据可就哭不回来了。
+天有不测风云，定期备份是王道，丢了数据可就哭不回来了 :)
 
 要备份两部分的数据
 
@@ -25,7 +29,7 @@ WordPress功能确实很强，对于个人Blog或是小型的内容网站非常�
 
 备份Dump出来，通过Mail发到自己的邮箱中；再把备份脚本配到Cron上，这样就可以定期备份了，比如每周一6点执行备份。费话少说，上备份脚本：
 
-```bash
+{% highlight bash linenos %}
 #!/bin/bash
 # file name: wp-backup.sh
 # Author: Jerry Lee (http://oldratlee.com)
@@ -59,7 +63,7 @@ ifconifg:
 echo "$MAIL_CONTENT" | mutt -s "wordpress backup $BKP_NOW" -a $WP_BKP_FILE_NAME -a $WP_DB_BKP_FILE_NAME -- $WP_BACKUP_MAIL
 echo send mail finished.\($(($SECONDS - $TICK))s\)
 rm $WP_BKP_FILE_NAME $WP_DB_BKP_FILE_NAME
-```
+{% endhighlight %}
 
 把脚本中开头的6个变量设置成你环境中的值。
 
@@ -77,7 +81,7 @@ rm $WP_BKP_FILE_NAME $WP_DB_BKP_FILE_NAME
 
 1. Add Post URL  
 在文章的开始或是结尾加上一文字，比如版权申明、转载链接之类的。  
-# 这个插件我也装了，在文章的开头加了转载链接。
+\# 这个插件我也装了，在文章的开头加了转载链接。
 2. Syntax Highlighter ComPress  
 程序员常常在文章中贴代码，这个是用来插入代码的。会在WordPress的Blog编辑器加上一个按钮来插入代码。
 3. TinyMCE Advanced  

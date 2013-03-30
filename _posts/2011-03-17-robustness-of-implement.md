@@ -5,11 +5,14 @@ location: Hangzhou
 permalink: /380/tech/java/robustness-of-implement.html
 write-time: 2011-03-17 20:54
 tags:
-- XX
-- YY
+- dubbo
+- Service
+- robustness
+- 设计
+- Java
 ---
 
-转于自己在公司的Blog：http://pt.alibaba-inc.com/wp/experience_1224/robustness-of-implement.html
+转于自己在公司的Blog：<http://pt.alibaba-inc.com/wp/experience_1224/robustness-of-implement.html>
 
 Dubbo作为远程服务暴露、调用和治理的解决方案，是应用运转的经络，其本身实现健壮性的重要程度是不言而喻的。
 
@@ -65,21 +68,21 @@ Dubbo作为远程服务暴露、调用和治理的解决方案，是应用运转
 1. 线程池(ExectorService)的大小和饱和策略
 -----------------------
 
-Server端用于处理请求的ExectorService设置上限。
+Server端用于处理请求的ExectorService设置**上限**。
 
-ExecutorService的任务等待队列使用有限队列，避免资源耗尽。
+ExecutorService的任务等待队列使用**有限队列**，避免资源耗尽。
 
 当任务等待队列饱和时，选择一个合适的饱和策略。这样保证平滑劣化。
 
 在Dubbo中，饱和策略是丢弃数据，等待结果也只是请求的超时。
 
-达到饱和时，说明已经达到服务提供方的负荷上限，要在饱和策略的操作中日志记录这个问题，以发出监控警报。
+达到饱和时，说明已经达到服务提供方的**负荷上限**，要在饱和策略的操作中日志记录这个问题，以发出监控警报。
 
 记得注意不要重复多次记录哦。
 
 （注意，缺省的饱和策略不会有这些附加的操作。）
 
-根据警报的频率，已经决定扩容调整等等，避免系统问题被忽略。
+根据警报的频率，已经决定扩容调整等等，避免**系统问题**被忽略。
 
 2. 集合容量
 -------------------------

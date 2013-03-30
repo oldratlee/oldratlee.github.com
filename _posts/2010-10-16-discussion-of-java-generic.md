@@ -5,10 +5,9 @@ location: Hangzhou
 permalink: /268/tech/java/discussion-of-java-generic.html
 write-time: 2010-10-16 14:59
 tags:
-- JLS
-- 生活
-- blog
-- Java,
+- template
+- generic
+- Java
 ---
 
 Java5加入了泛型，有了泛型可以避免丑陋的类型转换操作，也大大提高了代码的可读性。既然如此，可以声明类型参数时，我们尽量要使用泛型。
@@ -19,15 +18,17 @@ Java5加入了泛型，有了泛型可以避免丑陋的类型转换操作，也
 
 希望你看了这里的内容，能引发你继续去读上面列的资料的冲动。
 
+![Cup<Tea>](/files/java-cpu-tea.jpeg)
+
 来上一 杯<茶> 吧，看看泛型相关的问题 :idea:
 
 1. 无法创建泛型的数据
 ===========================
 
-```java
+{% highlight java %}
 List<String>[] list1 = new ArrayList<String>[3]; // 编译错
 List<String>[] list2 = new ArrayList[3]; // 编译警告
-```
+{% endhighlight %}
 
 第一行的错误信息是 “Cannot create a generic array of ArrayList<String>”。
 
@@ -44,7 +45,7 @@ List<String>[] list2 = new ArrayList[3]; // 编译警告
 2. 下面的代码涉及了简单的泛型类型参数类型范围。你能看懂和使用吗
 =======================================
 
-```java
+{% highlight java %}
 public static void foo(List<? extends Number> list) {
     list.add(new Integer(2)); // 编译通过么?  Why ?
 }
@@ -52,25 +53,25 @@ public static void bar(List<? super Number> list) {
     list.add(new Integer(2)); // 编译通过么?  Why ?
     list.add(new Float(2)); // ok?
 }
-```
+{% endhighlight %}
 
 3. Java5中Enum的源代码中，它是这么定义的：
 ===========================
 
-```java
+{% highlight java %}
 public abstract class Enum<E extends Enum<E>>
     implements Comparable<E>, Serializable {
-```
+{% endhighlight %}
 
 这个类似递归结构的Enum<E extends Enum<E>>表达了什么含义？
 
 4. 在Collections工具类中的max方法声明的含义？
 ===================
 
-```java
+{% highlight java %}
 public static <T extends Object & Comparable<? super T>>T max(
     Collection<? extends T> coll) {
-```
+{% endhighlight %}
 
 这个返回类型的声明更复杂了，表达了什么含义？
 
