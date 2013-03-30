@@ -5,8 +5,12 @@ location: Hangzhou
 permalink: /448/tech/unix/sed-study-and-share.html
 write-time: 2012-02-08 21:48
 tags:
-- XX
-- YY
+- gnu
+- shell
+- awk
+- Unix/Linux
+- unix
+- sed
 ---
 
 之前一直对sed和awk一知半解，平时有简单的使用，也知道功能强大，一直想好好研究一下。
@@ -25,7 +29,7 @@ PPT不会有sed详细的语法和命令说明，下面的资料很不错：
 
 - sed的man page
 - sed的GNU Manual，语法命令的详细说明（包含了GNU扩展的说明）   
-http://www.gnu.org/software/sed/manual/html_node/index.html
+<http://www.gnu.org/software/sed/manual/html_node/index.html>
 
 **TODO**
 sed -- A programmer's perspective View morePowerPoint fromJerry Lee

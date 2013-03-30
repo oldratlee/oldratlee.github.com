@@ -5,8 +5,14 @@ location: Hangzhou
 permalink: /430/tech/java/dubbo-extension-load-implement.html
 write-time: 2011-10-21 16:52
 tags:
-- XX
-- YY
+- extension
+- dubbo
+- Service
+- extensionloader
+- classloader
+- class
+- servicelocator
+- Java
 ---
 
 Java有几个常用扩展点加载的实现：
@@ -23,11 +29,11 @@ Dubbo的扩展点实现方式采用了标准Java Service，使用相同的配置
 ============================
 
 标准的Java的Service的说明在这里有说明： 
-http://download.oracle.com/javase/1.5.0/docs/guide/jar/jar.html#Service Provider
+<http://download.oracle.com/javase/1.5.0/docs/guide/jar/jar.html#Service%20Provider>
 
-JDK5类在对应的是 sun.misc.Service ，到了JDK6后移到了 java.util.ServiceLoader ，成为了标准Java API了。源代码 http://www.docjar.com/html/api/java/util/ServiceLoader.java.html
+JDK5类在对应的是 sun.misc.Service ，到了JDK6后移到了 java.util.ServiceLoader ，成为了标准Java API了。源代码 <http://www.docjar.com/html/api/java/util/ServiceLoader.java.html>
 
-```java
+{% highlight java %}
 // 常量及设置好ServiceLocator属性
 final String PREFIX = "META-INF/services/";
 Class service = ...; // Service接口
@@ -47,6 +53,6 @@ while (configs.hasMoreElements()) {
  
 // 拿到providerClassNames后，通过 Class.forName(classname, true, loader).newInstance()方法，
 // 加载类Provider类，并返回Service的Provider类的各个Instance
-```
+{% endhighlight %}
 
 【未完待续ing…】

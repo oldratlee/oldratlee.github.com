@@ -5,14 +5,18 @@ location: Hangzhou
 permalink: /410/tech/java/the-comparation-between-methods-of-getting-current-time-in-java-and-the-process-of-time.html
 write-time: 2011-09-02 13:10
 tags:
-- XX
-- YY
+- currentTimeMillis
+- time
+- Calendar
+- date
+- now
+- Java
 ---
 
 一、获取当前时间
 ==========================
 
-在Java中获取当前时间我一般总是使用long java.lang.System.currentTimeMillis()方法，Long类型是基本类型，运算（如比较时间的前后）、传输和存储都很方便。
+在Java中获取当前时间我一般总是使用`long java.lang.System.currentTimeMillis()`方法，Long类型是基本类型，运算（如比较时间的前后）、传输和存储都很方便。
 
 当然，如果有的方法要使用java.util.Date类型，可能通过构造函数new Date(long date)来切换类型。java.util.Date.getTime()方法，则把Date类型切换成Long类型。当然使用Date的缺省构造函数new Date()来获得当前的时间的Date。
 
@@ -27,12 +31,13 @@ tags:
 （不要一开始就考虑性能问题，性能问题往往不会成为问题；性能问题往往也是由上一点复杂性引起的）
 三个方法运行10M次所用时间：（在我开发机上的运行时间，只是示意一下比例）
 
-```java
+{% highlight java %}
 System.currentTimeMillis() 10M times: 169ms
 new Date() 10M times: 283ms
 Calendar.getInstance() 10M times: 6625ms
-# java.util.Calendar.getInstance()方法消耗时间 约是 new Date() 的 20倍。
-```
+{% endhighlight %}
+
+\# java.util.**Calendar**.getInstance()方法消耗时间 约是 new Date() 的 20倍。
 
 二、时间的处理
 ==========================

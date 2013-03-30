@@ -5,10 +5,17 @@ location: Hangzhou
 permalink: /458/tech/shell/find-file-in-jar-zip-files.html
 write-time: 2012-04-11 22:37
 tags:
-- XX
-- YY
+- zip
+- shell
+- grep
+- log4j.xml
+- jar
+- log4j.properties
+- Shell
+- bash
+- find
+- log4j
 ---
-
 
 开发时会碰到
 
@@ -22,7 +29,7 @@ tags:
 实现一
 ==================
 
-```bash
+{% highlight bash linenos %}
 find -iname '*.jar' | while read jarfile
 do
         jar tf $jarfile | grep 'log4j\.properties\|log4j\.xml' | while read item
@@ -30,13 +37,13 @@ do
                 echo "$jarfile"\!"$item"
         done
 done
-```
+{% endhighlight %}
 
 即用Find命令找出Jar文件，用jar命令list中Jar中文件名，grep到log4j.properties后，输出成
 
-```bash
+{% highlight bash linenos %}
 path/to/file.jar!path/to/log4j.properties
-```
+{% endhighlight %}
 
 的格式，jar文件和jar里面的文件用!分隔。
 
@@ -44,7 +51,7 @@ path/to/file.jar!path/to/log4j.properties
 
 但是zip -l列出的输出格式是
 
-```bash
+{% highlight bash linenos %}
 $ unzip -l foo.jar
 Archive:  foo.jar
   Length      Date    Time    Name
@@ -56,17 +63,17 @@ Archive:  foo.jar
 ......
 ---------                     -------
      3430                     8 files
-```
+{% endhighlight %}
 
 我还没有找到不输出头和尾信息的选项。这里要组合一些命令来去了。
 
 实现二
 =================
 
-```bash
+{% highlight bash linenos %}
 find -iname '*.jar' -exec sh -c \
     'jar tf $0 | grep 'log4j\.properties\|log4j\.xml' | xargs -r printf "$0!%s\n"' {} \;
-```
+{% endhighlight %}
 
 输出和实现一相同，要短一些，但可读性差些。
 
