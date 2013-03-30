@@ -68,7 +68,7 @@ tags:
 
 # 计算的Python代码
 
-```python
+{% highlight python %}
 # Calculate the months which First day is monday
 # My related Blog: http://oldratlee.com/post/2012-11-13/1-st-day-is-monday-month-count
 
@@ -92,7 +92,7 @@ print "Month list for leap year: ", map(partial(getDwsMonths, dayCountOfMonthOfY
 
 print "Month list for non-leap year: ", map(partial(getDwsMonths, dayCountOfMonthOfLeapYear), range(0, 7))
 # [[10], [1, 4, 7], [9, 12], [6], [3, 11], [2, 8], [5]]
-```
+{% endhighlight %}
 
 [放在github gist上的代码段](https://gist.github.com/4071311 "github gist")
 
