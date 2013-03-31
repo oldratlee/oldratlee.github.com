@@ -2,7 +2,7 @@
 layout: post
 title: More Effective Sort
 location: Hangzhou
-permalink: /post/2013-04-01/more-effective-sort
+permalink: /post/2013-04-01/more-effective-gnu-sort
 write-time: 2013-03-31 22:17:33
 tags:
 - sort
@@ -18,7 +18,7 @@ sort支持字段比较，用好这个功能常常可以省去比如用`awk`来�
 先上示例
 ===========
 
-先看一完例子，有了感性认识之后，再看【关于sort的字段】一节的说明。
+先看一完例子，有了功能上的认识之后，再看【关于sort的字段】一节的说明。
 
 第二字段作为Key排序
 -------------------
