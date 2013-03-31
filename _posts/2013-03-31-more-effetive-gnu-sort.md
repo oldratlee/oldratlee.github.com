@@ -33,9 +33,29 @@ sort -k2,2
 3 a z
 4 a w
 
-# 输出，第一、三个字段不影响
+# 输出，第一、三个字段不影响，所以第三个字段的z是在w之前
 3 a z
 4 a w
+2 b y
+1 c x
+{% endhighlight %}
+
+第二字段到最后一个字段（即行尾）作为Key排序
+-------------------
+
+{% highlight bash %}
+# 命令行
+sort -k2
+
+# 输入
+1 c x
+2 b y
+3 a z
+4 a w
+
+# 输出，Key包含了第三个字段，第三个字段的w、z顺序正确
+4 a w
+3 a z
 2 b y
 1 c x
 {% endhighlight %}
@@ -98,7 +118,7 @@ sort -k2b,2
 
 {% highlight bash %}
 # 命令行，第二字段为第一Key排序，第三字段到行尾的内容为第二Key
-sort -k2b,2 -k4,4
+sort -k2b,2 -k3
 
 # 输入
 1  c x
