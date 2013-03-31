@@ -155,10 +155,10 @@ sort -k2b,2 -k3
 -------------
 
 - `-n, --numeric-sort`  
-按数据类型排序，`1 < 02 < 3`。  
+按数字类型排序，`1 < 02 < 3`。  
 如果按字符排序，则是 `02 < 1 < 3`。
 - `-g, --general-numeric-sort`  
-按数据类型排序，支持通用记数，即认识`1.234E10`。要更慢并且有舍入问题（可能`1.2345678 > 1.2345679`）     
+按数字类型排序，支持通用记数，即认识`1.234E10`。会更慢并且有舍入问题（可能`1.2345678 > 1.2345679`）     
 详见[What's the difference between --general-numeric-sort and --numeric-sort options in gnu sort](http://stackoverflow.com/questions/1255782/whats-the-difference-between-general-numeric-sort-and-numeric-sort-options/1255800#1255800)
 - `-V, --version-sort`  
 以版本号的方式排序。这个功能很霸气啊！
