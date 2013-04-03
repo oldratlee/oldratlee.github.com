@@ -18,7 +18,10 @@ tags:
 
 原文：[A generic input/output API in Java](http://www.jroller.com/rickard/entry/a_generic_input_output_api)(by Rickard berg)给出了一个通用Java IO API的设计。更重要的一点是，这篇文章给出实现这个API设计本身的步骤和过程，这让API设计实现过程有了条理。文中示范了从 普通简单实现 整理成 正确分解、可以复用、可扩展的API设计 的过程。这个很值得理解和学习！ 
 
-PS: 设计偏向是艺术，一个赏心悦目的设计，尤其是API设计，旁人看来多是妙手偶得的感觉，如果有些章可循真是一件好事。给出***减少艺术的艺术工作量***的方法的人是大师。
+PS: 设计偏向是艺术，一个赏心悦目的设计，尤其是API设计，旁人看来多是妙手偶得的感觉，如果有些章可循真是一件好事。给出***减少艺术的艺术工作量***的方法的人是大师。  
+另，做为练习，实现这个API。示例放在了<https://github.com/oldratlee/io-api>【[代码zip包](https://github.com/oldratlee/io-api/archive/master.zip)】，可以下载后在IDE中查看 :)
+
+------------------------------
 
 上周处理了很多数据搬移，有原始byte形式的，也有String形式的，还有SPI和领域级对象形式。这些活让我觉得，以可伸缩、高性能、正确处理错误的方式把数据从一处搬到另一处，是非常有难度。我要一遍又一遍做一些事，比如从文件中读出String。
 
