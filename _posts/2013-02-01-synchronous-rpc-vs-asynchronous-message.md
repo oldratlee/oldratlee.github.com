@@ -34,7 +34,7 @@ tags:
 ===================
 
 
-```bash
+{% highlight bash %}
 RPC系统结构：
 
 +----------+     +----------+
@@ -49,7 +49,7 @@ Message Queue系统结构：
 | Sender | <=> | Queue | <=> | Receiver |
 +--------+     +-------+     +----------+
 Sender发送消息给Queue；Receiver从Queue拿到消息来处理。
-```
+{% endhighlight %}
 
 功能特点
 ===================

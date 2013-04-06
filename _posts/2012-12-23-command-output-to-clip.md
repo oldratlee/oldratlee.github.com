@@ -40,7 +40,7 @@ Windows下
 
 示例：
 
-```bash
+{% highlight bash %}
 echo Hello | clip 
 # 将字符串Hello放入Windows剪贴板
 
@@ -52,7 +52,7 @@ clip < README.TXT
 
 echo | clip 
 # 将一个空行放入Windows剪贴板，即清空Windows剪贴板
-```
+{% endhighlight %}
 
 Linux下
 =====================
@@ -61,7 +61,7 @@ Linux下
 
 示例：
 
-```bash
+{% highlight bash %}
 cat README.TXT | xsel
 cat README.TXT | xsel -b # 如有问题可以试试-b选项
 xsel < README.TXT 
@@ -69,7 +69,7 @@ xsel < README.TXT
 
 xsel -c
 # 清空剪贴板
-```
+{% endhighlight %}
 
 Mac下
 =====================
@@ -79,10 +79,10 @@ Mac下
 
 示例：
 
-```bash
+{% highlight bash %}
 echo 'Hello World!' | pbcopy
 # 将字符串Hello World放入剪贴板
-```
+{% endhighlight %}
 
 最佳实践
 ====================
@@ -92,12 +92,12 @@ echo 'Hello World!' | pbcopy
 
 命令的结果输出时，如果给复制命令（即上面提到的命令clip、xsel、pbcopy）那么命令输出就看不到了。如果你想先看到命令的输出，可以下面这么做。
 
-```bash
+{% highlight bash %}
 $ echo 'Hello World!' | tee tmp.file.txt
 Hello World!
 $ xsel < tmp.file.txt
 $ rm tmp.file.txt
-```
+{% endhighlight %}
 
 即先使用`tee`命令把输出输到控制台和一个文件中。
 
@@ -108,9 +108,9 @@ $ rm tmp.file.txt
 
 使用下面的命令：
 
-```bash
+{% highlight bash %}
 $ pbcopy < ~/.ssh/id_rsa.pub
-```
+{% endhighlight %}
 
 注：不同系统使用不同的复制命令
 
