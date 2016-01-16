@@ -1,6 +1,6 @@
 ---
 layout: page
-description: "一生想做浪漫极客"
+description: "宁静致远"
 ---
 
 {% for post in paginator.posts %}
@@ -19,7 +19,7 @@ description: "一生想做浪漫极客"
         </div>
     </a>
     <p class="post-meta">
-        Posted by {% if post.author %}{{ post.author }}{% else %}{{ site.title }}{% endif %} on {{ post.date | date: "%B %-d, %Y" }}
+        Posted on {{ post.date | date: "%B %-d, %Y" }}
     </p>
 </div>
 <hr>
