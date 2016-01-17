@@ -1,12 +1,13 @@
 # Site settings
 title: 李鼎的博客
-SEOTitle: 李鼎的博客 | oldratlee Blog
+SEOTitle: "李鼎的博客 | Jerry Lee's Blog"
 header-img: img/home-bg.jpg
 email: oldratlee@gmail.com
 description: "这里是 @oldratlee 的个人博客，宁静致远。"
-keyword: "oldratlee, Jerry Lee, Java, git, github"
-url: "http://oldratlee.com"              # your host, for absolute URL
+keyword: "oldratlee, Jerry Lee, Java, git, github, shell, android"
+url: "http://oldratlee.com"             # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
+
 
 # SNS settings
 RSS: false
@@ -17,7 +18,6 @@ github_username:    oldratlee
 facebook_username:  oldratlee
 
 
-
 # Build settings
 highlighter: pygments
 permalink: pretty
@@ -26,15 +26,13 @@ exclude: ["less","node_modules","Gruntfile.js","package.json","README.md"]
 anchorjs: true                          # if you want to customize anchor. check out line:181 of `post.html`
 
 
-
 # Markdown settings
 # replace redcarpet to kramdown,
 # although redcarpet can auto highlight code, the lack of header-id make the catalog impossible, so I switch to kramdown
 # document: http://jekyllrb.com/docs/configuration/#kramdown
 markdown: kramdown
 kramdown:
-  input: GFM                            # use Github Flavored Markdown !important
-
+    input: GFM                            # use Github Flavored Markdown !important
 
 
 # Disqus settings
@@ -46,8 +44,6 @@ duoshuo_username: oldratlee
 duoshuo_share: true                     # set to false if you want to use Comment without Sharing
 
 
-
-
 # Analytics settings
 # Baidu Analytics
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
@@ -56,17 +52,16 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # ga_domain: oldratlee.com
 
 
-
 # Sidebar settings
 sidebar: true                           # whether or not using Sidebar.
 sidebar-about-description: "Be a focused & creative doer!"
-sidebar-avatar: /img/avatar.jpg      # use absolute URL, seeing it's used in both `/` and `/about/`
-
+sidebar-avatar: /img/avatar.jpg         # use absolute URL, seeing it's used in both `/` and `/about/`
 
 
 # Featured Tags
 featured-tags: true                     # whether or not using Feature-Tags
 featured-condition-size: 1              # A tag will be featured if the size of it is more than this condition value
+
 
 # Friends
 # friends: [
@@ -78,5 +73,6 @@ featured-condition-size: 1              # A tag will be featured if the size of 
 #         href: "http://hmqk1995.github.io"
 #     }
 # ]
+
 
 gems: [jekyll-paginate]
