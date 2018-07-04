@@ -18,7 +18,7 @@ tags:
 > 1. Inference in argument position，在参数位置（提取<font color="blue">形参</font>的类型信息）的类型推导
 > 1. Inference in chained calls，链式调用上的类型推导
 
-`Java 8/9(9.0.4)`   <font color="red">目前都不支持</font> <font color="blue"> 在<b>链式调用</b>上做类型推导</font>。
+`Java 8/9(9.0.4)/10(10.0.1)/11(11-ea)` <font color="red">目前都不支持</font> <font color="blue"> 在<b>链式调用</b>上做类型推导</font>。
 
 # 测试分析以及结论与解决方法
 
@@ -55,7 +55,7 @@ public class TypeInferenceShowcase {
 
 ## 编译结果
 
-`Java 8/9` 的编译出错信息完全一样。
+`Java 8/9/10/11` 的编译出错信息完全一样。
 
 ```bash
 ## Java 8 ##
@@ -75,11 +75,29 @@ TypeInferenceShowcase.java:12: 错误: 不兼容的类型: Object无法转换为
         String head = Collections.emptyList().get(0);
                                                  ^
 1 个错误
+
+# Java 10
+$ javac -version && echo && javac TypeInferenceShowcase.java
+javac 10.0.1
+
+TypeInferenceShowcase.java:12: 错误: 不兼容的类型: Object无法转换为String
+        String head = Collections.emptyList().get(0);
+                                                 ^
+1 个错误
+
+# Java 11
+$ javac -version && echo && javac TypeInferenceShowcase.java
+javac 11-ea
+
+TypeInferenceShowcase.java:12: 错误: 不兼容的类型: Object无法转换为String
+        String head = Collections.emptyList().get(0);
+                                                 ^
+1 个错误
 ```
 
 ## 解决方法
 
-因为`Java 8/9`  <font color="red">不支持</font> <font color="blue"> 在<b>链式调用</b>上做类型推导</font>，  
+因为`Java 8/9/10/11` <font color="red">不支持</font> <font color="blue"> 在<b>链式调用</b>上做类型推导</font>，  
 \# 即 <font color="red">不支持</font> 类型信息从链路后面的调用 向 前面 传递，即 支持在调用链上类型信息的<font color="blue"><b>逆向传递</b></font>  
 所以需要自己在 **链式调用** 上手动补上类型信息：
 
@@ -112,7 +130,7 @@ String head1 = list1.get(0);
     * 类型信息从调用链 后面的调用 向 前面的调用 传递，即 支持**链式调用**时 类型信息的 <font color="blue"><b>由后往前 的逆向传递</b></font>。
     * 这个Case，可以看作是 赋值语句推广加强  
          因为链式只有一级调用时，就 <font color="blue"><b>退化</b></font>成了 赋值语句 的Case。
-    * `JEP`中说的好好的，然而，上面的测试可以看到，`Java 8/9` <font color="red"><b>目前是不支持的</b></font> ！！
+    * `JEP`中说的好好的，然而，上面的测试可以看到，`Java 8/9/10/11` <font color="red"><b>目前是不支持的</b></font> ！！
 
 总得来说，`Java`的类型推导还是不够友好的，这些我们人肉解析器都能在直觉上很快完成推导觉得没问题的代码，`Java`编译却是过不了，**surprise～** =_=！
 
