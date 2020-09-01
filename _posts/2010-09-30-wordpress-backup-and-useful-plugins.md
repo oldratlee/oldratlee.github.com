@@ -32,7 +32,7 @@ WordPress功能确实很强，对于个人Blog或是小型的内容网站非常�
 {% highlight bash linenos %}
 #!/bin/bash
 # file name: wp-backup.sh
-# Author: Jerry Lee (http://oldratlee.com)
+# Author: Jerry Lee (http://oldratlee.github.io)
 # Date: 2010-9-27
 # Usage: backup wordpress doc and mysql schema data
 # set the root directory of your wordpress

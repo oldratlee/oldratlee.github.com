@@ -14,7 +14,7 @@ Java5加入了泛型，有了泛型可以避免丑陋的类型转换操作，也
 
 这里只是列出常见的泛型使用问题，给出精简的解释和快速的解决方法，只是一个抛砖引玉。
 
-更全面分析和阐述的资料在我的文章[《Java泛型学习资料小汇》](http://oldratlee.com/278/study-material-of-java-generic.html)中有整理，比我说的好得太多 :)
+更全面分析和阐述的资料在我的文章[《Java泛型学习资料小汇》](http://oldratlee.github.io/278/study-material-of-java-generic.html)中有整理，比我说的好得太多 :)
 
 希望你看了这里的内容，能引发你继续去读上面列的资料的冲动。
 

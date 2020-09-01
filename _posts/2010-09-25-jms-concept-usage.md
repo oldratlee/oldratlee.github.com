@@ -18,7 +18,7 @@ Part 1 概念
 一、中间件 ＆ 消息中间件（Message-Oriented Middleware、MOM）
 -------------------------------------------------------------
 
-参见[An Introduction to the JMS](http://oldratlee.com/115/tech/java/introduction-to-jms.html)。
+参见[An Introduction to the JMS](http://oldratlee.github.io/115/tech/java/introduction-to-jms.html)。
  
 
 二、JMS占了MOM分布式系统中哪些部分

@@ -41,7 +41,7 @@ tags:
 
 # 为什么有需求，要查看两个分支或是标签的Diff？
 
-和2个版本并行的开发模式有关，参见我的博文： [Dubbo的2个版本并行的开发模式](http://oldratlee.com/post/2012-11-08/40042657196 "Dubbo的2个版本并行的开发模式")
+和2个版本并行的开发模式有关，参见我的博文： [Dubbo的2个版本并行的开发模式](http://oldratlee.github.io/post/2012-11-08/40042657196 "Dubbo的2个版本并行的开发模式")
 
 采用2个版本并行开发后，当新功能版本要成为线上的GA版本时，会想和当前GA比较一下，
 
@@ -67,7 +67,7 @@ GUI Diff工具可以配置忽略不重要的异常（比如我用的Beyond Compa
 
 另，GUI的显示会更直观和方便操作，这正是Diff查看需要特征。比如分左右两栏对比查看（VimDiff也可以）、把变动的内容用不同的颜色标识出来 等等。
 
-关于的GUI和CLI的比较可以看一下我另一篇博文[【译】GUI & CLI Principles](http://oldratlee.com/post/2012-11-04/gui-cli-principles "【译】GUI & CLI Principles")。
+关于的GUI和CLI的比较可以看一下我另一篇博文[【译】GUI & CLI Principles](http://oldratlee.github.io/post/2012-11-04/gui-cli-principles "【译】GUI & CLI Principles")。
 
 ## 使用git difftool
 

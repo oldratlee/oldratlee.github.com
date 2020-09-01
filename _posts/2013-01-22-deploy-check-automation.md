@@ -189,7 +189,7 @@ curl http://127.0.0.1:${APP_PORT}/sys/config?warmup=false
 
 warm-up一个临时状态，长时间处于warm-up状态会有故障。所以加上监控项：如果注册中心是warm-up状态，报警。  
 \# 这个问题引发过故障，当时warm-up状态设置还是人肉完成，结果发布完成后忘记改回来了。  
-\# 这个问题也引出另一个方面的思考，在我的下面这篇博文中说明： [准备一个安全可靠的发布流程](http://oldratlee.com/post/2013-01-22/safe-and-reliable-deploy-flow "准备一个安全可靠的发布流程") 。
+\# 这个问题也引出另一个方面的思考，在我的下面这篇博文中说明： [准备一个安全可靠的发布流程](http://oldratlee.github.io/post/2013-01-22/safe-and-reliable-deploy-flow "准备一个安全可靠的发布流程") 。
 
 总结
 ===========================

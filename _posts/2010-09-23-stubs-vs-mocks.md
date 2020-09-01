@@ -45,7 +45,7 @@ PS
 
 顺便推荐一下《Programming Groovy － Dynamic Productivity for the jdk Developer》这本书。
 
-这是一本Groovy进阶的书，入门可以先看一下《Groovy Recipes －Greasing the Wheels of jdk 》或是《Groovy Programming －An Introduction for jdk Developers》。Groovy的学习资料的介绍可以参见：<http://oldratlee.com/87/groovy-study-info.html>。
+这是一本Groovy进阶的书，入门可以先看一下《Groovy Recipes －Greasing the Wheels of jdk 》或是《Groovy Programming －An Introduction for jdk Developers》。Groovy的学习资料的介绍可以参见：<http://oldratlee.github.io/87/groovy-study-info.html>。
 
 《Programming Groovy》中有关的元编程的讲解应该是最全面的。
 

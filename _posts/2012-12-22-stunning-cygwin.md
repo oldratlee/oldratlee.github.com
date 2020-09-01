@@ -24,7 +24,7 @@ tags:
 5年前倒腾过一次cygwin，当时体验感觉不好。到现在一直用的是[GNU utilities for Win32](http://unxutils.sourceforge.net/ "GNU utilities for Win32")，在Windows的CMD中使用*nix的命令工具包。
 
 GNU utilities for Win32很久没有更新，utils的版本太低，很多功能没有（比如grep输出不支持彩色输出的选项--color）等等。另，在Windows的“cmd的自动补全”、“命令历史”、“bat编程”太弱，一直忍受着~  
-\# 以前写过cmd相关的博文： [Windows命令行CMD的使用小技巧](http://oldratlee.com/319/tech/shell/windows-cmd-usage-tips.html "Windows命令行CMD的使用小技巧")、[如何在Windows下使用GNU命令](http://oldratlee.com/297/tech/unix/use-unix-command-under-windows.html "如何在Windows下使用GNU命令")
+\# 以前写过cmd相关的博文： [Windows命令行CMD的使用小技巧](http://oldratlee.github.io/319/tech/shell/windows-cmd-usage-tips.html "Windows命令行CMD的使用小技巧")、[如何在Windows下使用GNU命令](http://oldratlee.github.io/297/tech/unix/use-unix-command-under-windows.html "如何在Windows下使用GNU命令")
 
 最近大半年版本管理使用[Git](http://zh.wikipedia.org/zh-cn/Git "Git")，用的是[msysgit](http://code.google.com/p/msysgit/ "msysgit")。msysgit带了[MSYS](http://www.mingw.org/wiki/MSYS "MSYS")的Bash。用的过程中体验不错，很顺畅很有Linux的Feel了：
 
@@ -334,7 +334,7 @@ vi的语法高亮就不再截图了。
 一些最佳实践
 =====================
 
-[把命令行输出放在系统剪贴板上](http://oldratlee.com/post/2012-12-23/command-output-to-clip "把命令行输出放在系统剪贴板上")
+[把命令行输出放在系统剪贴板上](http://oldratlee.github.io/post/2012-12-23/command-output-to-clip "把命令行输出放在系统剪贴板上")
 
 后记
 ======================

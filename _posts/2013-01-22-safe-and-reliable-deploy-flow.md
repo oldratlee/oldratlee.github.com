@@ -106,7 +106,7 @@ Dubbo注册中心发布的热操作
 =================
 
 **下层操作*****简单*** 是流程会有好结果的前提！对于复杂的操作，那再好流程也不会有好的结果的！！  
-\# 关于如何去发现简化操作参见我的博文： [发布及其检查的自动化实践](http://oldratlee.com/post/2013-01-22/deploy-check-automation "发布及其检查的自动化实践")
+\# 关于如何去发现简化操作参见我的博文： [发布及其检查的自动化实践](http://oldratlee.github.io/post/2013-01-22/deploy-check-automation "发布及其检查的自动化实践")
 
 最后放上，Dubbo注册中心流程讨论时，大家一起看的视频：[一位744的老机长最后一次飞行](http://v.youku.com/v_show/id_XMzIwODE5MTk2.html)  
 这个视频由[Ludvik_淘宝伯昊](http://weibo.com/ludvik)找出来给大家看的。

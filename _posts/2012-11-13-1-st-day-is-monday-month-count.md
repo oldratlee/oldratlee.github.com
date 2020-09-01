@@ -16,7 +16,7 @@ tags:
 - 个数
 ---
 
-前面的博文“[任意挑一个月，一号是星期一的概率](http://oldratlee.com/post/2012-10-26/probability-of-1st-day-is-monday "任意挑一个月，一号是星期一的概率")”末尾留下了本文问题。
+前面的博文“[任意挑一个月，一号是星期一的概率](http://oldratlee.github.io/post/2012-10-26/probability-of-1st-day-is-monday "任意挑一个月，一号是星期一的概率")”末尾留下了本文问题。
 
 [热爱自然科学的好骚年](http://weibo.com/u/1692008241 "热爱自然科学的好骚年")在[微博](http://weibo.com/1692008241/z4RQIDNCi "微博")中给出的解法，并给出了运行结果。这里完整的记录一下。
 
@@ -70,7 +70,7 @@ tags:
 
 {% highlight python %}
 # Calculate the months which First day is monday
-# My related Blog: http://oldratlee.com/post/2012-11-13/1-st-day-is-monday-month-count
+# My related Blog: http://oldratlee.github.io/post/2012-11-13/1-st-day-is-monday-month-count
 
 dayCountOfMonthOfYear = [31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]
 dayCountOfMonthOfLeapYear = [31, 29, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31]

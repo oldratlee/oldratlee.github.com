@@ -127,6 +127,6 @@ $ pbcopy < ~/.ssh/id_rsa.pub
 后记
 =====================
 
-还在用的Windows、吐槽弱暴命令行cmd的程序猿们，推荐使用[cygwin](http://www.cygwin.com/ "cygwin")，可以看看我的博文[惊艳的cygwin——Windows下的Linux命令行环境](http://oldratlee.com/post/2012-12-22/stunning-cygwin "惊艳的cygwin——Windows下的Linux命令行环境")。
+还在用的Windows、吐槽弱暴命令行cmd的程序猿们，推荐使用[cygwin](http://www.cygwin.com/ "cygwin")，可以看看我的博文[惊艳的cygwin——Windows下的Linux命令行环境](http://oldratlee.github.io/post/2012-12-22/stunning-cygwin "惊艳的cygwin——Windows下的Linux命令行环境")。
 
 ![把命令行输出放在系统剪贴板上](http://m2.img.libdd.com/farm5/2012/1223/15/5B935348AF09C114763B5E8BFB713E5A4E76E375D0EC5_280_321.JPEG)

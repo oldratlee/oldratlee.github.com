@@ -5,7 +5,7 @@ header-img: img/home-bg.jpg
 email: oldratlee@gmail.com
 description: "这里是 @oldratlee 的个人博客，宁静致远。"
 keyword: "oldratlee, Jerry Lee, Java, git, github, shell, android"
-url: "http://oldratlee.com"             # your host, for absolute URL
+url: "http://oldratlee.github.io"             # your host, for absolute URL
 baseurl: ""                             # for example, '/blog' if your blog hosted on 'host/blog'
 
 
@@ -49,7 +49,7 @@ duoshuo_share: true                     # set to false if you want to use Commen
 # ba_track_id: 4cc1f2d8f3067386cc5cdb626a202900
 # Google Analytics
 # ga_track_id: 'UA-49627206-1'            # Format: UA-xxxxxx-xx
-# ga_domain: oldratlee.com
+# ga_domain: oldratlee.github.io
 
 
 # Sidebar settings
